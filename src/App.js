@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Web from './web';
+import 'bootstrap/dist/css/bootstrap.css';
+import TopLoader from "react-top-loader";
+import Animator from './components/Animator';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (<>
 
+        <Animator
+            color="#61d800"
+            fixed={false}
+            backgroundColor="#ddd"
+            progressDuration={400}
+        />
+
+        <Web /></>)
+}
 export default App;
