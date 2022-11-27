@@ -3,12 +3,15 @@ import * as Icon from 'react-feather';
 import { useNavigate, NavLink } from 'react-router-dom'
 
 import { SidebarData } from '../components/SidebarData';
+import style from '../../src/components/template/assets/css/style.css'
 
 function Navbar() {
 
     const [state, setState] = useState({});
+    useEffect((e) => {
+        console.log(e)
 
-
+    }, [])
     const handleClick = (e, item) => {
         e.preventDefault();
         setState((state) => ({
@@ -17,7 +20,8 @@ function Navbar() {
         }));
     };
 
-    return (<nav className="sidebar sidebar-offcanvas" id="sidebar" style={{ 'marginTop': '52px' }}>
+
+    return (<nav className={`fixed_navbar sidebar sidebar-offcanvas`} id="sidebar">
         <ul className="nav">
             <li className="nav-item active">
                 <NavLink className="nav-link" to="/">
@@ -47,7 +51,7 @@ function Navbar() {
                             </div>
                         </li>)
                     } else {
-                        return (<li className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
+                        return (<li className={(a.title ? 'nav-item active' : 'nav-item')}>
                             <NavLink className="nav-link" to={a.path}>
                                 {a.icon} &nbsp;&nbsp;
                                 <span className="menu-title">{a.title}</span>
@@ -55,9 +59,9 @@ function Navbar() {
                         </li>)
                     }
                 })
-            } 
+            }
 
-            
+
         </ul>
     </nav >);
 

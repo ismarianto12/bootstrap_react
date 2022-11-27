@@ -47,7 +47,7 @@ const Template = ({ Outlet }) => {
         // function addActiveClass(element) {
         //     if (current === "") {
         //         //for root url
-        //         if (element.attr('href').indexOf("index.html") !== -1) {
+        //         if (element.attr('href').indexOf("/") !== -1) {
         //             element.parents('.nav-item').last().addClass('active');
         //             if (element.parents('.sub-menu').length) {
         //                 element.closest('.collapse').addClass('show');
@@ -99,8 +99,8 @@ const Template = ({ Outlet }) => {
 
                 <nav className="navbar col-lg-12 col-12 p-0 d-flex flex-row fixed-top">
                     <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                        <a className="navbar-brand brand-logo mr-5" href="index.html"><img src="https://bootstrapdash.com/demo/skydash-free/template/images/logo.svg" className="mr-2" alt="logo" /></a>
-                        <a className="navbar-brand brand-logo-mini" href="index.html"><img src="https://bootstrapdash.com/demo/skydash-free/template/images/logo-mini.svg" alt="logo" /></a>
+                        <a className="navbar-brand brand-logo mr-5" href="/"><img src="https://bootstrapdash.com/demo/skydash-free/template/images/logo.svg" className="mr-2" alt="logo" /></a>
+                        <a className="navbar-brand brand-logo-mini" href="/"><img src="https://bootstrapdash.com/demo/skydash-free/template/images/logo-mini.svg" alt="logo" /></a>
                     </div>
                     <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                         <button onClick={(e) => setFixed(!fixed)} className="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -194,7 +194,7 @@ const Template = ({ Outlet }) => {
                     </div>
                 </nav>
                 {/* partial */}
-                <div className="container-fluid page-body-wrapper pt-0 proBanner-padding-top">
+                <div className="container-fluid page-body-wrapper pt-0 proBanner-padding-top" style={{'paddingRight':'0px'}}>
                     {/* partial:partials/_settings-panel.html */}
                     <div className="theme-setting-wrapper">
                         <div id="settings-trigger"><Icon.Settings /></div>

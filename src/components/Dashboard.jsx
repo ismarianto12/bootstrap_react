@@ -1,5 +1,13 @@
+import { Helmet } from "react-helmet";
+
 const Error = () => {
     return (<>
+
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Dashboard</title>
+            <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
 
         <div className="row">
             <div className="col-md-6 grid-margin stretch-card">

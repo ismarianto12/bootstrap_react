@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import * as Icon from 'react-feather';
+import { Helmet } from 'react-helmet';
 import { Navigate, useNavigate, NavLink, redirect } from 'react-router-dom';
 import Swal from 'sweetalert2';
 export default function Login() {
@@ -49,9 +50,13 @@ export default function Login() {
             password: ''
         })
     }
-    return (
-
+    return (   
         <div className="container-fluid ps-md-0">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Login</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <div className="row g-0">
                 <div className="d-none d-md-flex col-md-4 col-lg-6 bg-image" style={divStyleright} />
                 <div className="col-md-8 col-lg-6" style={divStyle}>

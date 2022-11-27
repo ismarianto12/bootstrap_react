@@ -1,7 +1,13 @@
+import { Helmet } from "react-helmet"
+
 const User = () => {
     return (
         <>
-
+   <Helmet>
+        <meta charSet="utf-8" />
+        <title>User Access</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
             <div className="col-lg-12 grid-margin stretch-card">
                 <div className="card">
                     <div className="card-body">
